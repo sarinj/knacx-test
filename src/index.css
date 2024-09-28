@@ -3,6 +3,43 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
+}
+
+.custom-clip-path {
+  @apply relative;
+  clip-path: polygon(
+    0 60%,
+    0 0,
+    100% 0,
+    100% 20%,
+    96% 30%,
+    91% 38%,
+    85% 44%,
+    78% 51%,
+    69% 55%,
+    60% 58%,
+    48% 60%,
+    35% 60%,
+    20% 60%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(191, 191, 191);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
 }
