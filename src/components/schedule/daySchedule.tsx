@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
-import { Appointment } from './interface'
 import { generateTimeSlots } from './timeUtils'
 import AppointmentCard from './appointmentCard'
+import { Appointment } from '@/models/appointments'
 
 interface DayScheduleProps {
   appointments: Appointment[]

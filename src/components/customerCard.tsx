@@ -11,18 +11,18 @@ export default function CustomerCard() {
         <div className='size-full'>
           <div className='flex h-[80px] w-full justify-between'>
             <div>
-              <p className='text-blue text-lg font-semibold'>วรภัทธ บารมี</p>
-              <p className='text-blue text-lg font-semibold'>6401023</p>
+              <p className='text-lg font-semibold text-blue'>วรภัทธ บารมี</p>
+              <p className='text-lg font-semibold text-blue'>6401023</p>
             </div>
             <div className='flex flex-col items-end justify-between'>
-              <p className='bg-blue rounded-tr-md p-2 text-xs text-white'>05</p>
+              <p className='rounded-tr-md bg-blue p-2 text-xs text-white'>05</p>
               <button className='hover:cursor-pointer'>
                 <BanIcon size={20} color='red' />
               </button>
             </div>
           </div>
         </div>
-        <div className='bg-green absolute left-0 top-0 rounded-tl-md px-4 py-2 text-xs font-semibold text-white'>
+        <div className='absolute left-0 top-0 rounded-tl-md bg-green px-4 py-2 text-xs font-semibold text-white'>
           01
         </div>
       </div>

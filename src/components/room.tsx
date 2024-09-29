@@ -7,10 +7,10 @@ interface RoomProps {
 export default function Room({ name }: RoomProps) {
   return (
     <div className='flex h-full flex-col'>
-      <div className='bg-green flex items-center justify-center rounded-t-md p-4 text-white'>
+      <div className='flex items-center justify-center rounded-t-md bg-green p-4 text-white'>
         <p>{name}</p>
       </div>
-      <div className='bg-green-2 h-full max-h-[calc(100vh-137px)] space-y-2 overflow-y-auto rounded-b-md p-4'>
+      <div className='h-full max-h-[calc(100vh-140px)] space-y-2 overflow-y-auto rounded-b-md bg-green-2 px-4'>
         <CustomerCard />
         <CustomerCard />
         <CustomerCard />
