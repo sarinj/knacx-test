@@ -6,6 +6,7 @@ import { DUMMY_DOCTOR_APPOINTMENTS, DUMMY_ROOMS } from './constants/dummyData'
 import { useMemo, useState } from 'react'
 import { SelectDoctor } from './components/selectDoctor'
 import DoctorDetailCard from './components/schedule/doctorDetailCard'
+import RoomList from './components/roomList'
 
 function App() {
   const [selectedDoctor, setSelectedDoctor] = useState('1')
@@ -54,15 +55,7 @@ function App() {
             </Button>
           </div>
         </div>
-        <div className='flex h-[calc(100vh-72px)] gap-x-4 overflow-x-auto py-2 pb-8'>
-          {DUMMY_ROOMS.map(room => (
-            <Room
-              key={room.id}
-              room={room}
-              isPaymentRoom={room.isPaymentRoom}
-            />
-          ))}
-        </div>
+        <RoomList />
       </div>
     </div>
   )
