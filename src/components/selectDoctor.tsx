@@ -84,7 +84,7 @@ export function SelectDoctor({ value, onChange }: SelectDoctorProps) {
                 >
                   <div className='flex items-center gap-4'>
                     <Avatar>
-                      <AvatarImage src='https://github.com/shadcn.png' />
+                      <AvatarImage src='src/assets/placeholder.png' />
                     </Avatar>
                     <p>{doctor.name}</p>
                   </div>

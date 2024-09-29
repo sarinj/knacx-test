@@ -10,12 +10,26 @@ import {
   ReceiptText,
   User2Icon,
 } from 'lucide-react'
+import { Appointment } from '@/models/appointments'
+import { timeToString } from '@/lib/utils'
 
 export default function HoverAppointmentDetail({
   children,
+  appointment,
 }: {
   children: ReactNode
+  appointment: Appointment
 }) {
+  const {
+    doctorName,
+    patientName,
+    description,
+    patient_id,
+    phone,
+    startTime,
+    endTime,
+    expense,
+  } = appointment
   return (
     <HoverCard>
       <HoverCardTrigger>{children}</HoverCardTrigger>
@@ -28,33 +42,37 @@ export default function HoverAppointmentDetail({
         <div className='flex items-center justify-between gap-4'>
           <div className='p-1 font-semibold text-green'>
             <p>นัดหมาย</p>
-            <p>ทันตแพทย์ คุณหมอสมมุติ ทดสอบ</p>
+            <p>ทันตแพทย์ {doctorName}</p>
           </div>
           <Avatar>
-            <AvatarImage src='https://github.com/shadcn.png' />
+            <AvatarImage src='src/assets/placeholder.png' />
           </Avatar>
         </div>
         <div className='flex justify-between gap-4'>
           <div>
             <div className='flex items-center gap-2'>
               <User2Icon size={16} className='text-green' />
-              <p>6400004 | จรูญ ทดสอบ4</p>
+              <p>
+                {patient_id} | {patientName}
+              </p>
             </div>
             <div className='flex items-center gap-2'>
               <ClipboardListIcon size={16} className='text-green' />
-              <p>บริการรักษารากฟัน</p>
+              <p>{description}</p>
             </div>
             <div className='flex items-center gap-2'>
               <PhoneIcon size={16} className='text-green' />
-              <p>095-646-0248</p>
+              <p>{phone}</p>
             </div>
             <div className='flex items-center gap-2'>
               <ReceiptText size={16} className='text-green' />
-              <p>ประเมินค่าใช้จ่าย 0.00</p>
+              <p>ประเมินค่าใช้จ่าย {expense}</p>
             </div>
             <div className='flex items-center gap-2'>
               <Clock4Icon size={16} className='text-green' />
-              <p>18:00-18:30</p>
+              <p>
+                {timeToString(startTime)}-{timeToString(endTime)}
+              </p>
             </div>
           </div>
           <div className='flex items-end gap-4'>

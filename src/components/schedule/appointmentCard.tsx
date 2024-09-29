@@ -33,7 +33,7 @@ export default function AppointmentCard({
         zIndex: 10,
       }}
     >
-      <HoverAppointmentDetail>
+      <HoverAppointmentDetail appointment={appointment}>
         <p className='h-full'>
           {patientName} | {description} | {patient_id} | {phone} |{' '}
           {timeToString(startTime)}-{timeToString(endTime)} น.

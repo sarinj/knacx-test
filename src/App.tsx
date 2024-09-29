@@ -2,7 +2,7 @@ import { RotateCwIcon } from 'lucide-react'
 import Room from './components/room'
 import DaySchedule from './components/schedule/daySchedule'
 import { Button } from './components/ui/button'
-import { DUMMY_DOCTOR_APPOINTMENTS } from './constants/dummyData'
+import { DUMMY_DOCTOR_APPOINTMENTS, DUMMY_ROOMS } from './constants/dummyData'
 import { useMemo, useState } from 'react'
 import { SelectDoctor } from './components/selectDoctor'
 import DoctorDetailCard from './components/schedule/doctorDetailCard'
@@ -55,9 +55,13 @@ function App() {
           </div>
         </div>
         <div className='flex h-[calc(100vh-72px)] gap-x-4 overflow-x-auto py-2 pb-8'>
-          <Room name='Room 1' />
-          <Room name='Room 2' />
-          <Room name='Room 3' />
+          {DUMMY_ROOMS.map(room => (
+            <Room
+              key={room.id}
+              room={room}
+              isPaymentRoom={room.isPaymentRoom}
+            />
+          ))}
         </div>
       </div>
     </div>

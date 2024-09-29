@@ -11,9 +11,9 @@ export default function DoctorDetailCard({ doctor }: DoctorDetailCardProps) {
   return (
     <div className='mt-2'>
       <div className='flex items-center justify-between rounded-md bg-blue p-2'>
-        <p className='text-xl font-semibold text-white'>{type}</p>
+        <p className='text-2xl font-semibold text-white'>{type}</p>
         <Avatar>
-          <AvatarImage src='https://github.com/shadcn.png' />
+          <AvatarImage src='src/assets/placeholder.png' />
         </Avatar>
       </div>
       <div className='flex items-center justify-center gap-2 rounded-md bg-green-1 p-1'>
